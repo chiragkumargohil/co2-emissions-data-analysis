@@ -1,5 +1,4 @@
 import csv
-import time
 import matplotlib.pyplot as plt
 
 class CO2EmissionAnalysis:
@@ -12,6 +11,8 @@ class CO2EmissionAnalysis:
         self.keys = list(self.dictionary.keys())
         self.years = self.dictionary.get('CO2 per capita')
         self.countries = list(self.dictionary.keys())[1:]
+        print('\nWelcome to the CO2 Emission Data Analysis (1997-2010, 195 countries). There are four questions that print data, provide a summary of given year, visualize data for given countries (in Matplotlib), and save data in separate file for given countries.')
+        print('\n--------------------------------------------------\n')
     
     def show_data(self):
         for key, val in self.dictionary.items():
@@ -63,17 +64,17 @@ class CO2EmissionAnalysis:
         res = True
         for country in countries:
             if country not in self.countries:
-                print(f'-> Data for {country} is not available. Each name should be typed again.\n')
+                print(f'-> Data for {country} is not available. Each name should be typed again...\n')
                 res = False
                 break
         return res
     
     def valid_year(self, year: str):
         if not year.isdigit():
-            print('-> Invalid year.\n')
+            print('-> Invalid year...\n')
             return False
         elif not 1997 <= int(year) <= 2010:
-            print(f'-> No data are available for {year}..\n')
+            print(f'-> No data are available for {year}...\n')
             return False
         else:
             return True
