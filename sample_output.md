@@ -15,7 +15,7 @@ Enter a year to view its summary (1997 to 2010): 2022
 -> No data are available for 2022...
 
 Enter a year to view its summary (1997 to 2010): two thousand eleven
--> Invalid year.
+-> Invalid year...
 
 Enter a year to view its summary (1997 to 2010): 1997
 
