@@ -60,12 +60,13 @@ class CO2EmissionAnalysis:
         print("Data added in file named, 'Emissions_subset.csv'")
 
     def is_available(self, countries: list):
+        res = True
         for country in countries:
             if country not in self.countries:
                 print(f'-> Data for {country} is not available. Each name should be typed again.\n')
-                return False
-            else:
-                return True
+                res = False
+                break
+        return res
     
     def valid_year(self, year: str):
         if not year.isdigit():
