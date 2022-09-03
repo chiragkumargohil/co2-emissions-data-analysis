@@ -1,9 +1,6 @@
 from co2_emission_analysis import CO2EmissionAnalysis
 
 if __name__ == '__main__':
-    print('\n   Welcome to the CO2 Emission Data Analysis (1997-2010, 195 countries). There are four questions that print data, provide a summary of given year, visualize data for given countries (in Matplotlib), and save data in separate file for given countries.')
-    print('\n--------------------------------------------------\n')
-
     co2 = CO2EmissionAnalysis()
 
     while True:
